@@ -1,0 +1,25 @@
+netty:
+  server:
+    transfer:
+      type: tcp
+      port: 9812
+      maxContentLength: 98765
+      websocket:
+        path: /
+        subProtocol: 10015
+        allowExtensions: true
+
+    thread:
+      count:
+        boss: 1
+        worker: 1
+    log:
+      level:
+        pipeline: ERROR
+        bootstrap: ERROR
+spring:
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
